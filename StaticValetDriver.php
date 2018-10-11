@@ -46,7 +46,7 @@ class StaticValetDriver extends ValetDriver
      */
     public function frontControllerPath($sitePath, $siteName, $uri)
     {
-        if ($uri === '/') {
+        if (substr($uri, -1) === '/') {
             $uri = 'index.php';
         }
         return $sitePath.'/public/'.$uri;
